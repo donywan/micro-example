@@ -26,9 +26,9 @@ shou master status;
 ```
 得到如下信息
 
-File |Position|Binlog_Do_DB|Binlog_Ignore_DB|Executed_Gtid_Set
-- | - | - | - | -
-master-bin.000017  | 489 
+|File |Position|Binlog_Do_DB|Binlog_Ignore_DB|Executed_Gtid_Set
+|- | - | - | - | -
+|master-bin.000017  | 489 
 
 在slave数据库中执行
 ```

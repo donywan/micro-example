@@ -51,16 +51,16 @@ show slave status\G;
 |名称 | 值
 |- | -
 |Slave_IO_State| Waiting for master to send event
-                  |Master_Host| 127.0.0.1
-                  |Master_User| root
-                  |Master_Port| 33161
-                Connect_Retry| 60
-              Master_Log_File| master-bin.000017
-          Read_Master_Log_Pos| 489
-               Relay_Log_File| DESKTOP-UA3QFA9-relay-bin.000015
-                Relay_Log_Pos| 705
-        Relay_Master_Log_File| master-bin.000017
-             **Slave_IO_Running**| **Yes**
-            **Slave_SQL_Running**| **Yes**
+|Master_Host| 127.0.0.1
+|Master_User| root
+|Master_Port| 33161
+|Connect_Retry| 60
+|Master_Log_File| master-bin.000017
+|Read_Master_Log_Pos| 489
+|Relay_Log_File| DESKTOP-UA3QFA9-relay-bin.000015
+|Relay_Log_Pos| 705
+|Relay_Master_Log_File| master-bin.000017
+|**Slave_IO_Running**| **Yes**
+|**Slave_SQL_Running**| **Yes**
              
 

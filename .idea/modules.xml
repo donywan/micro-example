@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/micro-example.iml" filepath="$PROJECT_DIR$/micro-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-classroom/nacos-classroom.iml" filepath="$PROJECT_DIR$/nacos-classroom/nacos-classroom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-domain/nacos-domain.iml" filepath="$PROJECT_DIR$/nacos-domain/nacos-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-user/nacos-user.iml" filepath="$PROJECT_DIR$/nacos-user/nacos-user.iml" />
+    </modules>
+  </component>
+</project>

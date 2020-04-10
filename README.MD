@@ -1,5 +1,5 @@
 ## 搭建mysql数据库主从复制
-以我当前所有环境都是在windows下搭建，下载mysql压缩包解压后在
+下载mysql压缩包解压后在
 根目录下放建立`my.ini`文件配置，配置有如下参考。
 #### master
 ```
@@ -62,5 +62,30 @@ show slave status\G;
 |Relay_Master_Log_File| master-bin.000017
 |**Slave_IO_Running**| **Yes**
 |**Slave_SQL_Running**| **Yes**
-             
 
+## Nacos注册中心
+启动nacos
+```
+startup.cmd
+```
+默认注册中心地址
+```
+127.0.0.1:8848
+```
+后台地址
+```
+http://127.0.0.1:8848/nacos
+```
+进入后台新增dataId=nacos-spring的配置,格式为yaml
+```
+test:
+  test: helloworld!
+```
+## 启动nacos-user项目
+访问接口
+```
+http://127.0.0.1:2020/users
+```
+```
+[{"id":"28ed008d-0c6d-4d38-a3d8-b18f2e4b3830","name":"wang","age":1},{"id":"593d8d5a-95b5-4d50-b281-7e5776cf40a4","name":"wangdundun","age":26}]
+```

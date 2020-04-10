@@ -1,7 +1,7 @@
-##搭建mysql数据库主从复制
+## 搭建mysql数据库主从复制
 以我当前所有环境都是在windows下搭建，下载mysql压缩包解压后在
 根目录下放建立`my.ini`文件配置，配置有如下参考。
-####master
+#### master
 ```
 [mysqld]
 port=33161
@@ -11,7 +11,7 @@ character_set_server=utf8
 [client]
 default-character-set=utf8
 ```
-####slave
+#### slave
 ```
 [mysqld]
 port=33261
@@ -48,8 +48,8 @@ start slave;
 ```
 show slave status\G;
 ```
-名称|值
--|-
+名称 | 值
+- | -
 Slave_IO_State| Waiting for master to send event
                   Master_Host| 127.0.0.1
                   Master_User| root
@@ -62,16 +62,5 @@ Slave_IO_State| Waiting for master to send event
         Relay_Master_Log_File| master-bin.000017
              **Slave_IO_Running**| **Yes**
             **Slave_SQL_Running**| **Yes**
-              Replicate_Do_DB|
-          Replicate_Ignore_DB|
-           Replicate_Do_Table|
-       Replicate_Ignore_Table|
-      Replicate_Wild_Do_Table|
-  Replicate_Wild_Ignore_Table|
-                   Last_Errno| 0
-                   Last_Error|
-                 Skip_Counter| 0
-          Exec_Master_Log_Pos| 489
-              Relay_Log_Space| 1139
-              Until_Condition| None
+             
 

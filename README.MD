@@ -48,12 +48,12 @@ start slave;
 ```
 show slave status\G;
 ```
-名称 | 值
-- | -
-Slave_IO_State| Waiting for master to send event
-                  Master_Host| 127.0.0.1
-                  Master_User| root
-                  Master_Port| 33161
+|名称 | 值
+|- | -
+|Slave_IO_State| Waiting for master to send event
+                  |Master_Host| 127.0.0.1
+                  |Master_User| root
+                  |Master_Port| 33161
                 Connect_Retry| 60
               Master_Log_File| master-bin.000017
           Read_Master_Log_Pos| 489

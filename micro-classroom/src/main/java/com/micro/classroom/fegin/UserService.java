@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(name = "service-provider",fallback = UserServiceFallback.class)
 public interface UserService {
-    @GetMapping("/users")
-    public String getUsers();
-    @PostMapping("/user")
-    public void instertUser(@RequestBody String user);
-    @GetMapping("/test")
-    public String getTest();
+    @GetMapping("/api/user")
+    String getUsers();
+    @PostMapping("/api/user")
+    void instertUser(@RequestBody String user);
+    @GetMapping("/api/test")
+    String getTest();
 }

@@ -1,0 +1,34 @@
+server:
+  port: 4040
+spring:
+  main:
+#    allow-bean-definition-overriding: true
+  application:
+    name: mirco-gateway
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+    sentinel:
+      enabled: true
+      filter:
+        enabled: false
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+        # Add your routes here.
+        - id: user_route
+          uri: lb://micro-user
+          predicates:
+            - Path=/api/user/**
+#        - id: httpbin_route
+#          uri: https://httpbin.org
+#          predicates:
+#            - Path=/httpbin/**
+#          filters:
+#            - RewritePath=/httpbin/(?<segment>.*), /$\{segment}

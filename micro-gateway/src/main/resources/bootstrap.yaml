@@ -1,7 +1,7 @@
 server:
   port: 4040
 spring:
-  main:
+#  main:
 #    allow-bean-definition-overriding: true
   application:
     name: mirco-gateway

@@ -1,7 +1,7 @@
 package com.micro.user;
 
-import com.micro.domain.entity.User;
-import com.micro.user.mapper.UserMapper;
+import com.micro.domain.entity.UserInfo;
+import com.micro.user.mapper.UserInfoMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,11 +12,11 @@ import java.util.UUID;
 class ProviderApplicationTests {
 
 	@Autowired
-	UserMapper userMapper;
+	UserInfoMapper userMapper;
 	@Test
 	void contextLoads() {
 
-		User user = new User();
+		UserInfo user = new UserInfo();
 		user.setId(UUID.randomUUID().toString());
 		user.setAge(1);
 		user.setName("wang");

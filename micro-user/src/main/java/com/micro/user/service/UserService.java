@@ -1,14 +1,14 @@
 package com.micro.user.service;
 
-import com.micro.domain.entity.User;
+import com.micro.domain.entity.UserInfo;
 
 import java.util.List;
 
 //@RestController
 public interface UserService {
 //    @GetMapping("/users")
-    public List<User> getUsers();
+    public List<UserInfo> getUsers();
 
 //    @PostMapping("/user")
-    void insterUser(User user);
+    void insterUser(UserInfo user);
 }

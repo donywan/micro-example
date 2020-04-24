@@ -1,6 +1,6 @@
 package com.micro.user.controller;
 
-import com.micro.domain.entity.User;
+import com.micro.domain.entity.UserInfo;
 import com.micro.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,13 +23,13 @@ public class UserController {
     String data;
 
     @GetMapping("/user")
-    public List<User> findUsers() {
+    public List<UserInfo> findUsers() {
         System.out.printf("data数据为:" + data);
         return userService.getUsers();
     }
 
     @PostMapping("/user")
-    public void insertUser(User user) {
+    public void insertUser(UserInfo user) {
         user.setId(UUID.randomUUID().toString());
         userService.insterUser(user);
     }

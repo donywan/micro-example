@@ -3,11 +3,12 @@ package com.micro.domain.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Table(name = "user")
+//在postgresql当中存在user表，为避免冲突改为userinfo
+@Table(name = "userinfo")// ,schema = "public"
 @Entity
-public class User implements Serializable {
+public class UserInfo implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     @Column
     private String name;

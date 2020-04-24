@@ -3,7 +3,7 @@ package com.micro.user;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -11,8 +11,10 @@ import java.sql.SQLException;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableAutoConfiguration(exclude = JtaAutoConfiguration.class)
+//@EnableAutoConfiguration(exclude = JtaAutoConfiguration.class)
+@EnableAutoConfiguration
 //@NacosConfigurationProperties(dataId = "nacos-spring", autoRefreshed = true)
+@EntityScan(value = "com.micro.domain.entity")
 public class UserApplication {
 
 

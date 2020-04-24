@@ -1,6 +1,9 @@
 server:
   port: 2020
 spring:
+  profiles:
+    active:
+      cockroach
   application:
     name: micro-user
   cloud:
@@ -8,7 +11,7 @@ spring:
       server-addr: 127.0.0.1:8848
       config:
         name: nacos-spring #dataId名称
-#        server-addr: 127.0.0.1:8848
+        #        server-addr: 127.0.0.1:8848
         file-extension: yaml
     sentinel:
       filter:
@@ -19,26 +22,31 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-  shardingsphere:
-    props:
-      sql:
-        show: true
-    datasource:
-      master:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        jdbc-url: jdbc:mysql://127.0.0.1:33161/test?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
-        password: root
-        type: com.zaxxer.hikari.HikariDataSource
-        username: root
-      names: master,slave0
-      slave0:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        jdbc-url: jdbc:mysql://127.0.0.1:33261/test?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
-        password: root
-        type: com.zaxxer.hikari.HikariDataSource
-        username: root
-    masterslave:
-      load-balance-algorithm-type: round_robin
-      master-data-source-name: master
-      name: ms
-      slave-data-source-names: slave0
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+#         dialect: org.hibernate.dialect.MySQLDialect
+
+#  shardingsphere:
+#    props:
+#      sql:
+#        show: true
+#    datasource:
+#      master:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://127.0.0.1:33161/test?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+#        password: root
+#        type: com.zaxxer.hikari.HikariDataSource
+#        username: root
+#      names: master,slave0
+#      slave0:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://127.0.0.1:33261/test?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#        password: root
+#        type: com.zaxxer.hikari.HikariDataSource
+#        username: root
+#    masterslave:
+#      load-balance-algorithm-type: round_robin
+#      master-data-source-name: master
+#      name: ms
+#      slave-data-source-names: slave0

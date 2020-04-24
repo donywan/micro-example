@@ -57,17 +57,30 @@ java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject
 - 服务接口地址为`http://localhost:2020/api/user`
 
 6. 刷新请求接口进行Sentinel测试
+### Picture
+1. Nacos
 
 ![nacos](./doc/image/nacos-1.png)
+2. Sentinel
 
 ![sentinel](./doc/image/sentinel-1.png)
 
 ![sentinel](./doc/image/sentinel-2.png)
-### Sharding JDBC
+3. 接口请求
+
+![api-1](./doc/image/api-1.png)
+
+![api-2](./doc/image/api-2.png)
+3. DB
+
+![db-1](./doc/image/db-1.png)
+
+![db-2](./doc/image/db-2.png)
+### ~~Sharding JDBC~~
 当运行查询操作的时候，可以在控制台看到输出信息
 ```
 2020-04-15 16:23:54.304  INFO 10220 --- [nio-2020-exec-1] ShardingSphere-SQL                       : SQL: select * from user ::: DataSources: slave0
 ```
 slave0即我们配置的从数据库。
 
-> 主从数据库搭建参考![WIKI](https://github.com/DonyWan/micro-example/wiki/%E6%90%AD%E5%BB%BAmysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6)
+> 主从数据库搭建参考[wiki](https://github.com/DonyWan/micro-example/wiki/%E6%90%AD%E5%BB%BAmysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6)

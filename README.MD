@@ -41,6 +41,8 @@ cockroach start --insecure --store=node3 --host=localhost --port=26259 --http-po
 ```
 >Nacos注册中心地址默认127.0.0.1:8848 
 
+在Nacos导入`/resources/config`目录下的`micro-user-cokroach.yaml`配置文件
+
 2. 启动Micro-user服务
 3. 启动Micro-gateway服务
 4. 启动Sentinel
@@ -50,7 +52,9 @@ cockroach start --insecure --store=node3 --host=localhost --port=26259 --http-po
 ```
 java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.7.2.jar
 ```
-> Sentinel应用的端口是8080，HTTP API Server 的端口号8719
+> Sentinel应用的端口是8080，HTTP API Server 的端口号8719，
+> 默认情况下CockroachDB启动节点1的admin ui端口也是8080，建议启动Sentinel的时候
+> 使用其他端口
 
 5. 访问接口地址
 - 网关接口地址为`http://localhost:4040/api/user`

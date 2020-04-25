@@ -1,10 +1,10 @@
-spring:
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    river-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:26257/test?sslmode=disable
-    #    url: jdbc:postgresql://localhost:5432/test1?sslmode=disable
-    username: root
-    password:
-  #  flyway:
-  #    baseline-on-migrate: true
+#spring:
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    river-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:26257/test?sslmode=disable
+#    #    url: jdbc:postgresql://localhost:5432/test1?sslmode=disable
+#    username: root
+#    password:
+#  #  flyway:
+#  #    baseline-on-migrate: true

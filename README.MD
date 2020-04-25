@@ -41,7 +41,7 @@ cockroach start --insecure --store=node3 --host=localhost --port=26259 --http-po
 ```
 >Nacos注册中心地址默认127.0.0.1:8848 
 
-在Nacos导入`/resources/config`目录下的`micro-user-cokroach.yaml`配置文件
+再Nacos导入`/resources/config`目录下的`micro-user-cokroach.yaml`配置文件，使用默认的`DEFAULT_GROUP`
 
 2. 启动Micro-user服务
 3. 启动Micro-gateway服务
@@ -80,6 +80,10 @@ java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject
 ![db-1](./doc/image/db-1.png)
 
 ![db-2](./doc/image/db-2.png)
+
+4. Cockroach
+
+![cockroach](./doc/image/cockroach-1.png)
 ### ~~Sharding JDBC~~
 当运行查询操作的时候，可以在控制台看到输出信息
 ```
